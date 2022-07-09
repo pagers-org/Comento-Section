@@ -10,14 +10,12 @@ const WINTER_SERVICE_CHARGE = 30;
 const before = (date, limit) => date < limit;
 const after = (date, limit) => limit < date;
 
-const calendar = { before, after };
-
 const getCharge = (quantity, date) => {
-  if (calendar.before(date, CONSTANTS.SUMMER_START) || calendar.after(date, CONSTANTS.SUMMER_END)) {
-    return quantity * CONSTANTS.WINTER_RATE + CONSTANTS.WINTER_SERVICE_CHARGE;
+  if (before(date, SUMMER_START) || after(date, SUMMER_END)) {
+    return quantity * WINTER_RATE + WINTER_SERVICE_CHARGE;
   }
   else {
-    return quantity * CONSTANTS.SUMMER_RATE;
+    return quantity * SUMMER_RATE;
   }
 }
 
