@@ -9,4 +9,4 @@ const object = {
   },
 };
 
-console.log(object.getMessage()); // 1번의 결과값 : Hello, Comento!!
+console.log(object.getMessage()); // 1번의 결과값 : Hello, Comento!! getMessage()함수에서 this는 object를 가리키므로 object.message를 가리킨다.
