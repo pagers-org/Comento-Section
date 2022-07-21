@@ -2,6 +2,7 @@
  * 리팩토링 해주세요!
  */
 class Car {
+  // Car라는 부모 클래스
   constructor(model) {
     this.model = model;
   }
@@ -10,16 +11,18 @@ class Car {
   }
 }
 class Audi extends Car {
+  // Car 클래스 상속
   constructor(model) {
     super(model);
-    this.brand = "Audi";
+    this.brand = "Audi"; //Audi 브랜드
   }
 }
 
 class BMW extends Car {
+  // Car 클래스 상속
   constructor(model) {
     super(model);
-    this.brand = "BMW";
+    this.brand = "BMW"; //BMW 브랜드
   }
 }
 

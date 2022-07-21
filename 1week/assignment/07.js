@@ -38,12 +38,14 @@ class AuthClient {
       this.pw = null;
       this.loggedIn = false;
       this.users.console.log(`회원탈퇴가 완료되었습니다. 아이디:${id}`);
-    } else {
+    } else if (this.id !== id) {
       console.log("자신의 계정만 비밀번호를 변경할 수 있어요.");
+    } else {
+      console.log("정보가 일치하는 계정이 없어요.");
     }
   }
   userList() {
-    console.log(this.users.map());
+    console.log(this.users);
   }
 }
 const authClient = new AuthClient();
