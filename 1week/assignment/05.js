@@ -2,7 +2,7 @@
  * 맞춰주세요!
  */
 var length = 4;
-console.log(this.length);
+
 function callback() {
   console.log(this.length);
 }

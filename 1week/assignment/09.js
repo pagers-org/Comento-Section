@@ -18,4 +18,4 @@ const getCharge = (quantity, month) => {
 };
 
 const charge = getCharge(3, new Date().getMonth() + 1);
-console.log(charge);
+console.log(charge); //여름일때 30, 가을, 겨울, 봄 일때 90 출력
