@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <style>
+    body {
+      font-family: 'DS-DIGII', sans-serif !important;
+    }
+
+    h1 {
+      font-family: 'DS-DIGII', sans-serif !important;
+      text-align: center !important;
+      margin: 0 !important;
+      font-size: 4em !important;
+    }
+
+    button {
+      font-size: 2em !important;
+      font-weight: bold;
+    }
+
+    main {
+      height: calc(100vh - 40px);
+    }
+
+    main>section {
+      font-family: 'Courier New', Courier, monospace !important;
+      margin-bottom: 40px !important;
+    }
+
+    main section:nth-of-type(2) {
+      margin-bottom: 0 !important;
+    }
+
+    form {
+      font-family: 'Courier New', Courier, monospace !important;
+      margin-bottom: 0 !important;
+    }
+
+    section article {
+      margin: 40px 0 !important;
+    }
+
+    hr {
+      border-top: 5px solid #ffffff !important;
+      border-radius: 5px;
+    }
+
+    svg {
+      pointer-events: none !important;
+    }
+
+    #todo-area {
+      height: 437px;
+    }
+
+    #counter-display>article {
+      padding: 0 !important;
+    }
+
+    #todo-input-section {
+      margin-top: 40px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .container {
+      padding: 0 !important;
+    }
+
+    #todo-content {
+      padding: 0 40px;
+      max-height: 280px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #todo-content div {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .todo-action {
+      display: flex;
+      gap: 40px;
+    }
+
+    .todo-action span {
+      padding: 10px;
+      background-color: #000000;
+      border-radius: 5px;
+    }
+
+    .todo-action span:hover {
+      cursor: pointer;
+    }
+
+    .complete-todo :is(.todo-title, .complete) {
+      text-decoration: line-through;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section id="todo-area">
+      <section id="todo-input-section">
+        <div class="grid">
+          <form>
+            <label for="todo-input">Todo Input</label>
+            <input type="text" id="todo-input" name="todo-input" required maxlength="50"
+              placeholder="please input to your todo">
+          </form>
+        </div>
+      </section>
+      <section id="todo-display">
+        <article id="todo-content">
+          <div class="row" key="todo-0">
+            <div class="todo-title">
+              <span>테스트</span>
+            </div>
+            <div class="todo-action">
+              <span class="complete">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-check">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span class="remove">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-trash-2">
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  <line x1="10" y1="11" x2="10" y2="17"></line>
+                  <line x1="14" y1="11" x2="14" y2="17"></line>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="./todo.js"></script>
+</body>
+
+</html>
