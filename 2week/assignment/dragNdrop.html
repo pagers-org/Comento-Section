@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: steelblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .empty {
+      height: 150px;
+      width: 150px;
+      margin: 10px;
+      border: solid 3px black;
+      background: white;
+    }
+
+    .fill {
+      background-image: url('https://source.unsplash.com/random/150x150');
+      height: 145px;
+      width: 145px;
+      cursor: pointer;
+    }
+
+    .hold {
+      border: solid 5px #ccc;
+    }
+
+    .hovered {
+      background-color: #333;
+      border-color: white;
+      border-style: dashed;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="empty">
+    <div class="fill" draggable="true"></div>
+  </div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <script type="module" src="./dragNdrop.js"></script>
+</body>
+
+</html>
