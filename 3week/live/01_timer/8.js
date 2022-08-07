@@ -1,5 +1,5 @@
-function greet(name, lastName) {
-  console.log('Hello' + ' ' + name + ' ' + lastName);
+function greet(name, lastName, message) {
+  console.log('Hello' + ' ' + name + ' ' + lastName + ' ' + message);
 }
 
-setInterval(greet, 1000, 'Parang', 'Hyun');
+setInterval(greet, 1000, 'Parang', 'Hyun', 'is Good?');
