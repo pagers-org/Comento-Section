@@ -4,4 +4,4 @@ function showTime() {
   console.log(time)
 }
 
-const display = setInterval(showTime, 5000);
+const display = setInterval(showTime, 1000);
