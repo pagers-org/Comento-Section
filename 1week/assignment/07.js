@@ -1,5 +1,6 @@
 /**
  * 구현해주세요!
+ * 기본 user에는 id: admin, password: 'admin1234'가 있습니다.
  */
 const authClient = new AuthClient();
 authClient.isLogin();                               // 로그인 되어 있지 않아요.
@@ -12,6 +13,6 @@ authClient.setPassword('admin2', 1234, 5678);       // 자신의 계정만 비�
 authClient.setPassword('admin', 'admin1234', 5678); // 패스워드가 재설정 되었습니다.
 authClient.withdrawal('admin2', 1234);              // 자신의 계정만 회원탈퇴를 할 수 있어요.
 authClient.withdrawal('admin', 1234);               // 정보가 일치하는 계정이 없어요.
-authClient.withdrawal('admin', 'admin1234');        // 회원탈퇴가 완료되었습니다. 아이디 : admin
+authClient.withdrawal('admin', 5678);               // 회원탈퇴가 완료되었습니다. 아이디 : admin
 authClient.isLogin();                               // 로그인 되어 있지 않아요.
 authClient.userList();                              // [ { userId: 'admin2', password: 1234 } ]
